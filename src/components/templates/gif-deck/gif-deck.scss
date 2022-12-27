@@ -1,0 +1,8 @@
+.gif-deck {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    align-self: center;
+  }
+}
