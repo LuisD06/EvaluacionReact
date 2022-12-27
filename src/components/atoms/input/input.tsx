@@ -3,8 +3,15 @@ import './input.scss'
 interface InputProps {
   placeholder: string
   type?: string
+  variant?: 'default' | 'left-rounded'
   onValueChange: () => void
 } 
-export const Input:FC<InputProps> = ({placeholder, type = 'text', onValueChange}) => {
-  return <input className='input' type={type} placeholder={placeholder} onChange={onValueChange}/>
+export const Input:FC<InputProps> = ({placeholder, type = 'text', variant = 'default', onValueChange}) => {
+  return <input 
+    className={`input input--${variant}`} 
+    type={type} 
+    placeholder={placeholder} 
+    onChange={onValueChange}
+
+  />
 }
